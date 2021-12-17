@@ -1,0 +1,45 @@
+/* smoke effect css  */
+
+.effect{
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: grid;
+    place-items: center;
+}
+.name{
+    color: #fff;
+    font-size: 100px;
+    user-select: none;
+}
+.smoke{
+    animation: smokeanim 2s forwards;
+    display: inline-block;
+    transition: .5s;
+
+}
+.name:hover span.smoke{
+    color: #f00;
+    transition: .5s;
+}
+
+
+@keyframes smokeanim{
+    0%{
+        opacity: 0;
+        filter: blur(0);
+        transform: translate(0 0) rotate(0deg) scale(0);
+    }
+    50%{
+        opacity: 1;
+        filter: blur(20px);
+        transform: translateY(-300px) translateX(-300px) rotate(30deg) scale(5);        
+        color: green;
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+        color: green;
+
+    }
+}
